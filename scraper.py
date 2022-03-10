@@ -98,26 +98,26 @@ def site_search(site_dict):
     url_base = site_dict["url"]
     id_dict = site_dict["ids"]
 
-    print(f"Scraping {site} {' ' * 11}", end='\r')
+    print(f"Scraping {site} {' ' * 11}")
 
     if abbr == "spark":
-        output = {k: {"available": sparkfun_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+        output = {k: {"available": sparkfun_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     elif abbr == "vil":
-        output = {k: {"available": vilros_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+        output = {k: {"available": vilros_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     elif abbr == "chi":
-        output = {k: {"available": chidist_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+        output = {k: {"available": chidist_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     elif abbr == "ada":
-        output = {k: {"available": adafruit_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+        output = {k: {"available": adafruit_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     elif abbr == "okdo":
-        output = {k: {"available": okdo_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+        output = {k: {"available": okdo_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     elif abbr == "pishop":
-        output = {k: {"available": pishop_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+        output = {k: {"available": pishop_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     elif abbr == "cana":
-        output = {k: {"available": canakit_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+        output = {k: {"available": canakit_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     else:
         output = {"error": "UNCAUGHT"}
     
-    print(f"Scraped {site} {' ' * 12}", end='\r')
+    print(f"Scraped {site} {' ' * 12}")
     return output
 
 
@@ -154,6 +154,10 @@ with open("sites.json") as json_file:
 
 with open("credentials.json") as json_file:
     creds = json.load(json_file)
+
+with open("device_ignore.json") as json_file:
+    device_ignore = json.load(json_file)
+    ignore = device_ignore["ignore"]
 
 
 main()
