@@ -11,3 +11,15 @@
   - `nano credentials.json`
 - execute script
   - `python3 scraper.py`
+
+
+### Note:
+In theory, this should be able to handle any product on the following (US) web stores:
+- PiShop
+- Vilros
+- Chicago Distribution
+- Adafruit
+- SparkFun
+- OKDO
+
+To extend this tool's functionality, you are able to add products to specific sites.
