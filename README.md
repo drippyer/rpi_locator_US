@@ -5,9 +5,9 @@
   -  `git clone https://github.com/drippyer/rpi_locator_US`
 - navigate to the created directory
   - `cd rpi_locator_US` 
-- copy `credentials_SAMPLE.json` to `credentials.json`
+- copy sample credentials to usable filename
   - `cp credentials_SAMPLE.json credentials.json`
-- modify `credentials_SAMPLE.json` to reflect your own Gmail credentials
+- modify created file to reflect your own Gmail credentials
   - `nano credentials.json`
 - execute script
   - `python3 scraper.py`
