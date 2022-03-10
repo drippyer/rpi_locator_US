@@ -1,0 +1,68 @@
+{
+    "sparkfun": {
+      "name": "SparkFun",
+      "short": "spark",
+      "url": "https://www.sparkfun.com/products/",
+      "ids": {
+        "z2w": "18713",
+        "4b8gb": "16811",
+        "4b4gb": "15447",
+        "4b2gb": "15446"
+      }
+    },
+    "pishop": {
+      "name": "PiShop",
+      "short": "pishop",
+      "url": "https://www.pishop.us/product/",
+      "ids": {
+        "z2w": "raspberry-pi-zero-2-w",
+        "4b8gb": "raspberry-pi-4-model-b-8gb",
+        "4b4gb": "raspberry-pi-4-model-b-4gb",
+        "4b2gb": "raspberry-pi-4-model-b-2gb"
+      }
+    },
+    "vilros": {
+      "name": "Vilros",
+      "short": "vil",
+      "url": "https://vilros.com/products/",
+      "ids": {
+        "z2w": "raspberry-pi-zero-2-w",
+        "4b8gb": "raspberry-pi-4-model-b-8gb-ram",
+        "4b4gb": "raspberry-pi-4-4gb-ram",
+        "4b2gb": "raspberry-pi-4-2gb-ram"
+      }
+    },
+    "chidist": {
+      "name": "Chicago Distribution",
+      "short": "chi",
+      "url": "https://chicagodist.com/products/",
+      "ids": {
+        "z2w": "raspberry-pi-zero-2",
+        "4b8gb": "raspberry-pi-4-model-b-8gb",
+        "4b4gb": "raspberry-pi-4-model-b-4gb",
+        "4b2gb": "raspberry-pi-4-model-b-2gb"
+      }
+    },
+    "adafruit": {
+      "name": "Adafruit",
+      "short": "ada",
+      "url": "https://www.adafruit.com/product/",
+      "ids": {
+        "z2w": "5291",
+        "4b8gb": "4564",
+        "4b4gb": "4296",
+        "4b2gb": "4292"
+      }
+    },
+    "okdo": {
+      "name": "OKDO",
+      "short": "okdo",
+      "url": "https://www.okdo.com/us/p/",
+      "ids": {
+        "z2w": "raspberry-pi-zero-2-w",
+        "4b8gb": "raspberry-pi-4-model-b-8gb-ram",
+        "4b4gb": "raspberry-pi-4-model-b-4gb",
+        "4b2gb": "raspberry-pi-4-model-b-2gb-2"
+      }
+    }
+  }
