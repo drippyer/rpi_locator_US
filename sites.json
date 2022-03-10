@@ -21,6 +21,17 @@
         "4b2gb": "raspberry-pi-4-model-b-2gb"
       }
     },
+    "microcenter": {
+      "name": "MicroCenter",
+      "short": "micro",
+      "url": "https://www.microcenter.com/product/",
+      "ids": {
+        "z2w": "643085/raspberry-pi-zero-2-w",
+        "4b8gb": "622539/raspberry-pi-4-model-b-8gb-ddr4",
+        "4b4gb": "609038/raspberry-pi-4-model-b-4gb-ddr4",
+        "4b2gb": "621439/raspberry-pi-4-model-b-2gb-ddr4"
+      }
+    },
     "vilros": {
       "name": "Vilros",
       "short": "vil",

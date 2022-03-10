@@ -91,6 +91,17 @@ def canakit_single(url):
     available = False if stock == "Sold Out" else True
     return available
 
+def microcenter_single(url):
+    page = urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'}))
+    soup = BeautifulSoup(page, parser)
+    try:
+        stock = soup.find("span", {"class": "inventoryCnt"}).text
+    except:
+        stock = ""
+    available = False if stock == "0 NEW IN STOCK" else True
+    return available
+
+
 
 def site_search(site_dict):
     site = site_dict["name"]
@@ -114,6 +125,8 @@ def site_search(site_dict):
         output = {k: {"available": pishop_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     elif abbr == "cana":
         output = {k: {"available": canakit_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
+    elif abbr == "micro":
+        output = {k: {"available": microcenter_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items() if k not in ignore}
     else:
         output = {"error": "UNCAUGHT"}
     
