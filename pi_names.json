@@ -1,6 +1,7 @@
 {
     "z2w": "RPi Zero 2W",
-    "4b8gb": "(8GB) RPi 4",
-    "4b4gb": "(4GB) RPi 4",
-    "4b2gb": "(2GB) RPi 4"
+    "4b8gb": "RPi 4 (8GB)",
+    "4b4gb": "RPi 4 (4GB)",
+    "4b2gb": "RPi 4 (2GB)",
+    "pico": "RPi Pico"
   }
