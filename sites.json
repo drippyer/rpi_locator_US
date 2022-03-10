@@ -54,6 +54,17 @@
         "4b2gb": "4292"
       }
     },
+    "canakit": {
+      "name": "CanaKit",
+      "short": "cana",
+      "url": "https://www.canakit.com/",
+      "ids": {
+        "z2w": "raspberry-pi-zero-2-w.html",
+        "4b8gb": "raspberry-pi-4-8gb.html",
+        "4b4gb": "raspberry-pi-4-4gb.html",
+        "4b2gb": "raspberry-pi-4-2gb.html"
+      }
+    },
     "okdo": {
       "name": "OKDO",
       "short": "okdo",

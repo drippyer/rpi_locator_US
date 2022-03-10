@@ -80,6 +80,18 @@ def pishop_single(url):
     return available
 
 
+def canakit_single(url):
+    page = urlopen(url)
+    soup = BeautifulSoup(page, parser)
+    try:
+        row = soup.find("div", {"id": "ProductAddToCartDiv"})
+        stock = row.find("a").string.strip()
+    except:
+        stock = ""
+    available = False if stock == "Sold Out" else True
+    return available
+
+
 def site_search(site_dict):
     site = site_dict["name"]
     abbr = site_dict["short"]
@@ -100,6 +112,8 @@ def site_search(site_dict):
         output = {k: {"available": okdo_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
     elif abbr == "pishop":
         output = {k: {"available": pishop_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
+    elif abbr == "cana":
+        output = {k: {"available": canakit_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
     else:
         output = {"error": "UNCAUGHT"}
     
@@ -126,7 +140,7 @@ def main():
                 msg["Subject"] = subject
                 msg["From"] = sender
                 msg["To"] = recipient
-                s.sendmail(sender, [recipient], msg.as_string())
+                #s.sendmail(sender, [recipient], msg.as_string())
             else:
                 subject = f"{pi_names[k2]} not at {k}...\n"
             print(subject)
