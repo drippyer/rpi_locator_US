@@ -86,6 +86,8 @@ def site_search(site_dict):
     url_base = site_dict["url"]
     id_dict = site_dict["ids"]
 
+    print(f"Scraping {site} {' ' * 11}", end='\r')
+
     if abbr == "spark":
         output = {k: {"available": sparkfun_single(f"{url_base}{v}"),"url": f"{url_base}{v}"} for k, v in id_dict.items()}
     elif abbr == "vil":
