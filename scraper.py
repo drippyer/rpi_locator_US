@@ -126,8 +126,7 @@ def main():
 
     sender = creds["username"]
     gmail_pass = creds["password"]
-    recipient = creds["recipient"]
-    #recipient = creds["recipient_test"]
+    recipients = creds["recipients"]
 
     s = smtplib.SMTP_SSL('smtp.gmail.com', 465)
     s.login(sender, gmail_pass)
@@ -135,14 +134,14 @@ def main():
     for k, v in stock.items():
         for k2, v2 in v.items():
             if v2["available"] is True:
-                subject = f"[!] {pi_names[k2]} at {k}!\n"
+                subject = f"[!] {pi_names[k2]} at {k}!"
                 msg = MIMEText(v2['url'])
                 msg["Subject"] = subject
                 msg["From"] = sender
-                msg["To"] = recipient
-                #s.sendmail(sender, [recipient], msg.as_string())
+                msg["To"] = recipients[0]
+                s.sendmail(sender, recipients, msg.as_string())
             else:
-                subject = f"{pi_names[k2]} not at {k}...\n"
+                subject = f"{pi_names[k2]} not at {k}..."
             print(subject)
 
     s.quit()

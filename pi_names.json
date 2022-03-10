@@ -3,5 +3,6 @@
     "4b8gb": "RPi 4 (8GB)",
     "4b4gb": "RPi 4 (4GB)",
     "4b2gb": "RPi 4 (2GB)",
-    "pico": "RPi Pico"
+    "pico": "RPi Pico",
+    "test": "Test"
   }
