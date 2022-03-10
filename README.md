@@ -12,6 +12,10 @@
 - execute script
   - `python3 scraper.py`
 
+#### CRON
+It is heavily recommended to use Cron to automatically run this script on a schedule.
+Exmaple: `*/3 * * * *   pi    cd /home/pi/rpi_locator_US && python3 scraper.py`
+
 
 ### Note:
 In theory, this should be able to handle any product on the following (US) web stores:
