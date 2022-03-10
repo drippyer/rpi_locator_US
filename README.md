@@ -27,5 +27,6 @@ In theory, this should be able to handle any product on the following (US) web s
 - SparkFun
 - OKDO
 - CanaKit (currently unstable but working)
+- MicroCenter
 
 To extend this tool's functionality, you are able to add products to specific sites.
