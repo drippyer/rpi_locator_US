@@ -1,14 +1,14 @@
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
+parser = "html.parser"
 
+import json
+
+from email.mime.text import MIMEText
+import smtplib
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-import smtplib
-from email.mime.text import MIMEText
-
-import json
-parser = "html.parser"
 
 def sparkfun_single(url):
     page = urlopen(url)
@@ -156,5 +156,5 @@ with open("sites.json") as json_file:
 with open("credentials.json") as json_file:
     creds = json.load(json_file)
 
-main()
 
+main()
