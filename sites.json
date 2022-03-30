@@ -18,7 +18,8 @@
         "z2w": "raspberry-pi-zero-2-w",
         "4b8gb": "raspberry-pi-4-model-b-8gb",
         "4b4gb": "raspberry-pi-4-model-b-4gb",
-        "4b2gb": "raspberry-pi-4-model-b-2gb"
+        "4b2gb": "raspberry-pi-4-model-b-2gb",
+        "cm4l8gb": "raspberry-pi-compute-module-4-wireless-8gb-lite-cm4108000/"
       }
     },
     "microcenter": {
@@ -40,7 +41,8 @@
         "z2w": "raspberry-pi-zero-2-w",
         "4b8gb": "raspberry-pi-4-model-b-8gb-ram",
         "4b4gb": "raspberry-pi-4-4gb-ram",
-        "4b2gb": "raspberry-pi-4-2gb-ram"
+        "4b2gb": "raspberry-pi-4-2gb-ram",
+        "cm4l8gb": "raspberry-pi-compute-module-4-8gb-ram"
       }
     },
     "chidist": {
@@ -84,7 +86,8 @@
         "z2w": "raspberry-pi-zero-2-w",
         "4b8gb": "raspberry-pi-4-model-b-8gb-ram",
         "4b4gb": "raspberry-pi-4-model-b-4gb",
-        "4b2gb": "raspberry-pi-4-model-b-2gb-2"
+        "4b2gb": "raspberry-pi-4-model-b-2gb-2",
+        "cm4l8gb": "raspberry-pi-compute-module-4-with-wifi-8gb-ram-lite"
       }
     }
   }
