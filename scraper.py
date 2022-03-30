@@ -18,7 +18,7 @@ def sparkfun_single(url):
         stock = row.find("span", {"class": "visuallyhidden"}).string.strip()
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 
@@ -30,7 +30,7 @@ def vilros_single(url):
         stock = row.find("span").string.strip()
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 
@@ -41,7 +41,7 @@ def chidist_single(url):
         stock = soup.find("span", {"class": "sold_out"}).string.strip()
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 
@@ -52,7 +52,7 @@ def adafruit_single(url):
         stock = soup.find("div", {"class": "oos-header"}).string.strip()
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 
@@ -64,7 +64,7 @@ def okdo_single(url):
         stock = row.find("span", {"class": "c-stock-level"}).string.strip()
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 
@@ -76,7 +76,7 @@ def pishop_single(url):
         stock = row["value"].strip()
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 
@@ -88,7 +88,7 @@ def canakit_single(url):
         stock = row.find("a").string.strip()
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 def microcenter_single(url):
@@ -98,7 +98,7 @@ def microcenter_single(url):
         stock = soup.find("span", {"class": "inventoryCnt"}).text
     except:
         stock = ""
-    available = False if stock.lower in oos else True
+    available = False if stock.lower() in oos else True
     return available
 
 

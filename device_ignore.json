@@ -1,5 +1,7 @@
 {
     "ignore": [
+        "4b8gb",
+        "4b4gb",
         "4b2gb",
         "pico",
         "test"
