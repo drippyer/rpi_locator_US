@@ -97,7 +97,10 @@ def microcenter_single(url):
     try:
         stock = soup.find("span", {"class": "inventoryCnt"}).text
     except:
-        stock = ""
+        try:
+            stock = soup.find("span", {"class": "availabilityTrunc"}).text
+        except:
+            stock = ""    
     available = False if stock.lower() in oos else True
     return available
 

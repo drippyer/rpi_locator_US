@@ -3,6 +3,7 @@
         "out of stock",
         "sold out",
         "0 new in stock",
-        "not available for backorder"
+        "not available for backorder",
+        "available for in-store pickup only."
     ]
 }
